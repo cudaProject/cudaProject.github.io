@@ -1,0 +1,681 @@
+// Fonts settings //
+@font-face {
+    font-family: 'TitilliumWeb_sbold';
+    src: url('../fonts/TitilliumWeb-SemiBold.eot');
+    src: url('../fonts/TitilliumWeb-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TitilliumWeb-SemiBold.woff2') format('woff2'),
+        url('../fonts/TitilliumWeb-SemiBold.woff') format('woff'),
+        url('../fonts/TitilliumWeb-SemiBold.ttf') format('truetype'),
+        url('../fonts/TitilliumWeb-SemiBold.svg#TitilliumWeb-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb_bold';
+    src: url('../fonts/TitilliumWeb-Bold.eot');
+    src: url('../fonts/TitilliumWeb-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TitilliumWeb-Bold.woff2') format('woff2'),
+        url('../fonts/TitilliumWeb-Bold.woff') format('woff'),
+        url('../fonts/TitilliumWeb-Bold.ttf') format('truetype'),
+        url('../fonts/TitilliumWeb-Bold.svg#TitilliumWeb-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb_light';
+    src: url('../fonts/TitilliumWeb-Light.eot');
+    src: url('../fonts/TitilliumWeb-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TitilliumWeb-Light.woff2') format('woff2'),
+        url('../fonts/TitilliumWeb-Light.woff') format('woff'),
+        url('../fonts/TitilliumWeb-Light.ttf') format('truetype'),
+        url('../fonts/TitilliumWeb-Light.svg#TitilliumWeb-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb_reg';
+    src: url('../fonts/TitilliumWeb-Regular.eot');
+    src: url('../fonts/TitilliumWeb-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TitilliumWeb-Regular.woff2') format('woff2'),
+        url('../fonts/TitilliumWeb-Regular.woff') format('woff'),
+        url('../fonts/TitilliumWeb-Regular.ttf') format('truetype'),
+        url('../fonts/TitilliumWeb-Regular.svg#TitilliumWeb-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sbold() {
+    font-family: 'TitilliumWeb_sbold', sans-serif;
+}
+
+.bold() {
+    font-family: 'TitilliumWeb_bold', sans-serif;
+}
+
+.light() {
+    font-family: 'TitilliumWeb_light', sans-serif;
+}
+
+.reg() {
+    font-family: 'TitilliumWeb_reg', sans-serif;
+}
+
+// Colors //
+
+@orange: #eb7d4b;
+@blue:#30bae7;
+@blue-dark: #273a71;
+@green: #17c2a4;
+@pink: #d74680;
+@grey:#878787;
+@main-bg: #87509c;
+@team-bg:#e7f1f8;
+@skills-bg: #fff;
+@portfolio-bg: #ffdd99;
+@contacts-bg: #3c5499;  
+@items-bg: #ebcb8d;
+@text-color-dark: #3c4761;
+@text-color-light: #f7f3ea;
+
+// Basic settings //
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    .reg();
+}
+
+.h2() {
+    .bold();
+    font-size: 4rem;
+}
+
+.h3() {
+    .bold();
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.p() {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+}
+
+
+// button settings 
+
+.button {
+    padding: 2rem 4rem;
+    width: 30%;
+    border: none;
+    border-radius: 6px;
+    color: @text-color-light;
+    text-transform: uppercase;
+    .sbold();
+    font-size: 1.8rem;
+}
+
+// Main section
+
+.main {
+    min-height: 100vh;
+    padding: 5rem 10rem ;
+    background-color: @main-bg;
+    color: @text-color-light;
+    &-menu { 
+        padding: 1rem 15rem;
+        background-color: @main-bg;
+        nav {
+            ul {
+                text-align: end;
+                a {
+                    padding: 0.5rem 1rem;
+                    margin-right: 0.5rem;
+                    text-decoration: none;
+                    color: @text-color-light;
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    border-radius: 5px;
+                    &:focus {
+                        background-color: #643a79;
+                        font-size: 1.7rem;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        border-radius: 2.5px;
+                    }
+                }
+            }
+        }
+    }
+    &-header {
+        margin: 30vh 0;
+        h1 {
+            .bold();
+            font-size: 4.2rem;
+        }
+        &__btn {
+            margin-top: 7vh;
+            background-color: @orange;
+            border-bottom: 5px solid #c86a40;
+            &:hover {
+                background-color: darken(@orange, 3%);
+            }
+        }
+    }
+}
+
+//Section Services
+
+.services {
+    min-height: 100vh;
+    padding: 5rem 10rem ;
+    background-color: @green;
+    &-header {
+        color: @text-color-light;
+        h2 {
+            margin-top: 8rem;
+            margin-bottom: 2rem;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: #000000;
+            opacity: 0.15;
+        }
+    }
+    &-block {
+        margin: 10vh 0;
+        &__img {
+            min-height: 13rem;
+        }
+        text-align: center;
+        h3 {
+            color: @text-color-light;
+            margin-top: 6.5rem;
+            margin-bottom: 2rem;
+            .h3();
+        }
+        p {
+            color: @text-color-light;
+            .p();
+            font-weight: 300;
+        }
+    }
+}
+
+// Team section
+
+.team {
+    min-height: 100vh;
+    padding: 7rem;
+    background-color: @team-bg;
+    &-header {
+        color: @text-color-dark;
+        h2 {
+
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: #bdd1df;
+            opacity: 0.75
+        }
+    }
+    &-block {
+        padding: 2rem;
+        margin-top: 5vh;
+        .circle {
+            margin: auto;
+            display: block;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background-color: @grey;
+        }
+        h3 {
+            margin-top: 4rem;
+            margin-bottom: 1.5rem;
+            .h3();
+            color: @text-color-dark;
+        }
+        span {
+            color: @blue;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            letter-spacing: 0.32px;
+        }
+        p {
+            min-height: 6rem;
+            margin: 2.7rem 0;
+            .p();
+            font-size: 1.6rem;
+            color: @text-color-dark;
+        }
+        img {
+            margin-right: 1rem;
+        }
+    }
+}
+
+// Section skills
+
+.skills {
+    padding: 12rem 0;
+    background-color: #fff;
+    &-header {
+        color: @text-color-dark;
+        h2 {
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: #000000;
+            opacity: 0.15;
+        }
+    }
+    h3 {
+        margin-right: 5.5rem;
+        .h3();
+        color: @text-color-dark;
+    }
+}
+
+// Portfolio section
+
+.portfolio {
+    padding: 5rem;
+    background-color: @portfolio-bg;
+    &-header {
+        color: @text-color-dark;
+        h2 {
+            margin-top: 8rem;
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+            color: #393939;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            color: #393939;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: #e5c37f;
+        }
+    }
+    nav {
+        a {
+            padding: 1rem 2.5rem;
+            margin-right: 1rem;
+            border-radius: 5px;
+            background-color: @items-bg;
+            text-decoration: none;
+            font-size: 1.8rem;
+            line-height: 1.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.36px;
+            color: #393939;
+            &:hover {
+                background-color: darken(@items-bg, 3%);
+            }
+            &:focus {
+                background-color: #fff;
+            }
+        }
+        .active {
+            background-color: #fff;
+        }
+    }
+    &-block {
+      margin-top: 6.2rem;  
+      &__work {
+          margin-bottom: 6.4rem;
+          p {
+              margin-top: 3.2rem;
+            .p();
+            color: #393939;
+            line-height: 1.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.36px;
+          }
+      }
+      &__btn {
+          background-color: @green;
+          border-bottom: 5px solid #14a58b;
+          &:hover {
+            background-color: darken(@green, 3%);
+          }
+      }
+    }
+}
+
+// feedback section
+
+.feedback {
+    min-height: 100vh;
+    padding: 11rem 0;
+    background-color: @pink;
+    &-header {
+        color: @text-color-light;
+        h2 {
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: #000000;
+            opacity: 0.15;
+        }
+    }
+    &-block {
+        color: @text-color-light;
+        margin-bottom: 15rem;
+        margin-right: 10rem;
+        .circle {
+            display: inline-block;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            background-color: #787878;
+        }
+        .media-body {
+            border: none;
+            margin-left: 5rem;
+            p {
+                .p();
+                font-size: 2.1rem;
+                font-style: italic;
+                line-height: 3.12rem;
+                letter-spacing: 0.35px;
+            }
+            h3 {
+                .h3()
+            }
+            span {
+                color: @portfolio-bg;
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+                letter-spacing: 0.36px;
+            }
+        }
+    }
+}
+
+// Contacts section
+
+.contacts {
+    padding: 12rem 0;
+    background-color: @contacts-bg;
+    &-header {
+        color: @text-color-light;
+        h2 {
+            margin-bottom: 2rem;
+            letter-spacing: 4px;
+            color: #fff;
+            .h2()
+        }
+        p {
+            margin-top: 2rem;
+            margin-bottom: 7rem;
+            color: #fff;
+            line-height: 2.6rem;
+            letter-spacing: 0.36px;
+            .p();
+        }
+        .line {
+            margin: auto;
+            width: 10%;
+            height: 0.4rem;
+            background-color: @blue-dark;
+        }
+    }
+    .form {
+        input, textarea {
+            padding: 2rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: @blue-dark;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+        }
+        input {
+            width: 40%;
+        }
+        textarea {
+            margin-top: 3rem;
+            width: 83%;
+            resize: none
+        }
+        .name{
+            margin-right: 3rem;
+        }
+        ::-webkit-input-placeholder {color:#fff;}
+        ::-moz-placeholder          {color:#fff;}
+        :-moz-placeholder           {color:#fff;}
+        :-ms-input-placeholder      {color:#fff;}
+        &-btn {
+            margin-top: 6rem;
+            background-color: @blue;
+            border-bottom: 5px solid #299ec4;
+            &:hover {
+                background-color: darken(@blue, 5%);
+            }
+        }
+    }
+}
+
+// Footer 
+
+footer {
+    background-color: #344b8e;
+    padding: 4rem;
+    a {
+        margin-right: 4rem;
+        .sbold();
+        font-size: 2.4rem;
+        line-height: 2.991rem;
+        letter-spacing: 0.48px;
+        color: @text-color-light;
+        opacity: 0.8;
+        &:hover {
+            color: @text-color-light;
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+    .twitter {
+        color: @blue;
+    }
+}
+
+// Adaptive menu
+
+//Adaptive section 
+
+@media(max-width: 991px) {
+    .main {
+        text-align: center;
+        &-menu {
+            padding: 0;
+            img {
+                width: 50%;
+                height: 100%;
+            }
+            nav {
+                display: none;
+            }
+        }
+        &-header {
+            text-align: center;
+            &__btn {
+                width: 60%;
+            }
+        }
+    }
+    .skills {
+        &-block {
+            margin-left: 3rem;
+        }
+        h3 {
+            margin-bottom: 5rem;
+            margin-right: 9rem;
+        }
+    }
+    .portfolio {
+        &-block {
+            &__btn {
+                width: 60%;
+            }
+        }
+    }
+    .feedback{
+        &-block {
+            width: 100%;
+            padding: 2rem;
+            margin-bottom: 5rem;
+            text-align: center;
+            border: 5px solid #fff;
+            .circle {
+                margin: auto;
+                height: 15rem;
+                width: 15rem;
+            }
+        }
+    }
+    .contacts {
+        form {
+            .form-btn {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .main {
+        text-align: center;
+        &-menu {
+            nav {
+                display: none;
+            }
+        }
+        &-header {
+            &__btn {
+                width: 65%;
+            }
+        }
+    }
+    .portfolio {
+        &-block {
+            &__btn {
+                width: 65%;
+            }
+        }
+    }
+    .services {
+        &-block {
+            border: 5px solid @items-bg;
+            border-radius: 5%;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            &__img {
+                min-height: 13rem;
+                
+            }
+            text-align: center;
+        }
+    }
+    .team {
+        &-block {
+            margin-bottom: 4rem;
+            border: 5px solid @grey;
+        }
+    }
+    .skills {
+        .blue-block {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border:6px solid @blue;
+        }
+        .pink-block {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border:6px solid @pink;
+        }
+        .green-block {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border:6px solid @green;
+        }
+        .orange-block {
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border:6px solid @orange;
+        }
+        h3 {
+            font-size: 3rem;
+            margin-top: 10rem;
+        }
+    }
+    .contacts {
+        form {
+            .form-btn {
+                width: 70%;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 550px) {
+    .portfolio {
+        nav {
+            a {
+                padding: 1rem;
+            }
+        }
+    }
+}
