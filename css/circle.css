@@ -243,6 +243,12 @@
   margin: 0 0.1em 0.1em 0;
   background-color: #dfe8ed;
 }
+@media(max-width: 500px) {
+  .c100 {
+    font-size: 15rem;
+    overflow: hidden;
+  }
+}
 .c100 *,
 .c100 *:before,
 .c100 *:after {

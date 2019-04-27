@@ -81,13 +81,23 @@
 @text-color-light: #f7f3ea;
 
 // Basic settings //
+* {
+    padding: 0;
+    margin: 0;
+  }
 
 html {
     font-size: 10px;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
     .reg();
 }
 
@@ -124,6 +134,7 @@ body {
 
 .main {
     min-height: 100vh;
+    min-width: 100vw;
     padding: 5rem 10rem ;
     background-color: @main-bg;
     color: @text-color-light;
@@ -474,6 +485,7 @@ body {
     }
     .form {
         input, textarea {
+            color: #fff;
             padding: 2rem 2.5rem;
             border: none;
             border-radius: 5px;
@@ -580,8 +592,8 @@ footer {
             border: 5px solid #fff;
             .circle {
                 margin: auto;
-                height: 15rem;
-                width: 15rem;
+                height: 25rem;
+                width: 25rem;
             }
         }
     }
@@ -596,27 +608,36 @@ footer {
 
 @media(max-width: 767px) {
     .main {
-        text-align: center;
+        width: 100%;
+        text-align: left;
+        // padding: 0;
         &-menu {
             nav {
                 display: none;
             }
         }
         &-header {
+            padding: 0;
             &__btn {
-                width: 65%;
+                padding: 2rem;
+                width: 95%;
             }
         }
     }
     .portfolio {
         &-block {
+            .icon-btn {
+                display: none;
+            }
             &__btn {
-                width: 65%;
+                width: 95%;
             }
         }
     }
     .services {
+        padding: 0;
         &-block {
+            width: 100%;
             border: 5px solid @items-bg;
             border-radius: 5%;
             padding: 2rem;
@@ -629,12 +650,14 @@ footer {
         }
     }
     .team {
+        padding: 0;
         &-block {
             margin-bottom: 4rem;
             border: 5px solid @grey;
         }
     }
     .skills {
+        padding: 0;
         .blue-block {
             padding: 2rem;
             margin-bottom: 3rem;
@@ -671,11 +694,87 @@ footer {
 }
 
 @media(max-width: 550px) {
-    .portfolio {
-        nav {
-            a {
-                padding: 1rem;
+    .main {
+        padding: 0;
+        padding-bottom: 5rem;
+    }
+    .services {
+        &-header {
+            padding: 0.5rem;
+        }
+        &-block {
+            &__img {
+            width: 90%;    
             }
+            h3  {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .team {
+        padding: 0;
+        &-block {
+            padding: 0.5rem;
+            .circle {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    }
+    .skills {
+        h3 {
+            margin-right:0;
+        }
+    }
+    .portfolio {
+        padding: 0;
+        nav {
+            .icon-btn {
+                display: none;
+            }
+            a {
+                padding: 0.5rem;
+            }
+        }
+    }
+    .feedback {
+        padding: 0;
+        &-block {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 5rem;
+            width: 100%;
+            .media {
+                display: block;
+                .circle {
+                    width: 15rem;
+                    height: 15rem;
+                    display: block;
+                }
+                &-body {
+                    margin: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+    .contacts {
+        padding: 0;
+        .form {
+            .name, .e-mail, textarea {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+            &-btn {
+                width: 95%;
+                padding: 1.5rem;
+            }
+        }
+    }
+    footer {
+        padding: 0;
+        .container {
+            margin-left: 2rem;
         }
     }
 }
